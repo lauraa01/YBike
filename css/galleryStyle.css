@@ -1,0 +1,124 @@
+section{
+    max-width: 1024px;
+    margin: 60px auto;
+}
+
+section h1{
+    text-align: center;
+    margin: 32px auto;
+    font-size: 30px;
+}
+
+#gallery-image-1{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 16px;
+}
+
+.gallery{
+    width: 100%;
+    height: 94%;
+    border-radius: 5px;
+	transition:0.3s ease;
+	opacity: 0.8;
+    cursor: pointer;
+}
+
+.gallery:hover{
+	opacity: 1;
+}
+
+#gallery-image-2, #gallery-image-3{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 16px;
+    padding-top: 50px;
+}
+
+
+/* ===================
+        MODAL
+    ==================
+ */
+
+.modal{
+	display: none;
+	position: fixed;
+	z-index:1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 94%;
+	overflow: auto;
+	background-color: rgba(44, 62, 80,0.8);
+}
+
+#caption{
+	color: #f2f2f2;
+	position: relative;
+	bottom: 72%;
+	left: 65%;
+	display: block;
+	width: 30%;
+	height: 60%;
+	max-width: 100%;
+	text-align: justify;
+	color: #f2f2f2;
+	padding:10px 0;
+	font-size: 150%;
+}
+
+.modal-image-content{
+	margin-left: 5%;
+	display: block;
+	width: 55%;
+	max-width: 700px;
+}
+
+.modal-image-content, #caption{
+	-webkit-animation-name:zoom;
+	-webkit-animation-duration:0.6s ease;
+	animation-name:zoom;
+	animation-duration:0.8s;
+}
+
+@-webkit-keyframes zoom{
+	from{-webkit-transform:scale(0)}
+	to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom{
+	from{transform:scale(0)}
+	to {transform:scale(1)}
+}
+
+#close{
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f2f2f2;
+	font-size: 40px;
+	font-weight: bold;
+	transition:0.5s ease;
+}
+
+#close:hover,#close:focus{
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* ------------------------------------- media queries ------------------------------ */
+@media screen and (max-width: 499px){
+	#gallery-image-1{
+		grid-template-columns:repeat(1, 1fr);
+	}
+
+	#gallery-image-2, #gallery-image-3{
+		grid-template-columns:repeat(1, 1fr);
+		padding-top: 50px;
+	}
+
+
+}

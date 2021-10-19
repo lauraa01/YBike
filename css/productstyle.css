@@ -1,0 +1,314 @@
+  /* bagian tengah */
+
+.contentimg1{
+  height: 700px;
+    background-image:url("../assets/homepageimg.png");
+    /* background-image:linear-gradient(), url("../assets/homepageimg.png"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile{
+  margin: 0px;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* background-color: black; */
+  background-image: url("../assets/homepageimg2.png");
+  /* height: 100vh; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.profileimg img{
+	padding: 7vw 7vw 0 7vw;
+	width: 27vw;
+}
+
+.bestSeller{
+  color: white;
+  font-size: 3vw;
+  padding: 0 0 4vw 4vw;
+}
+
+.profile-text{
+  font-size: 3vw;
+  color: white;
+  padding-left: 15vw;
+}
+
+
+.kawasaki1, .vixian{
+  max-width: 1024px;
+  margin: 3%;
+}
+
+#product-image-1, #product-image-2{
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap: 16px;
+}
+
+.product-kawasako, .product-vixian{
+	width:30vw;
+	padding-bottom: 10vw;
+}
+
+.product{
+  width: 100%;
+  height: 94%;
+  border-radius: 5px;
+  transition:0.3s ease;
+  opacity: 0.8;
+  cursor: pointer;
+  border: 1px solid lightslategrey;
+}
+
+.product:hover{
+	opacity: 1;
+}
+
+.desc{
+  background-color: #232628;
+  color: #f2f2f2;
+  padding: 0.5vw;
+  border-radius: 5px;
+}
+
+.tag{
+  padding-bottom: 1vw;
+  text-align: center;
+}
+
+.keyword1, .keyword2{
+  background-color: #1b192b;
+  color: #f2f2f2;
+  padding: 0.2vw 1px;
+  border-radius: 5px;
+}
+
+.desc h3, p{
+  text-align: center;
+}
+
+.desc p{
+  color: red;
+}
+
+
+/* ===================
+        MODAL
+    ==================
+ */
+
+.modal{
+	display: none;
+	position: fixed;
+	z-index:1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(44, 62, 80,0.8);
+}
+
+.modal-image-content{
+	margin-left: 5%;
+	display: block;
+	width: 40%;
+	max-width: 700px;
+}
+
+#caption{
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	color: #f2f2f2;
+	font-weight: bold;
+	padding:30px 100px 30px 10px;
+	height: 150px;
+}
+
+#price{
+	color: #f2f2f2;
+  	font-weight: bold;
+	bottom: 80%;
+	left: 60%;
+	position: relative;
+	display: block;
+	text-align: justify;
+}
+
+#paragraph{
+	color: #f2f2f2;
+	position: relative;
+	bottom: 75%;
+	left: 60%;
+	display: block;
+	width: 30%;
+	height: 60%;
+	max-width: 100%;
+	text-align: justify;
+	color: #f2f2f2;
+	padding:10px 0;
+}
+
+.modal-image-content , #caption , #paragraph, #price{
+	-webkit-animation-name:zoom;
+	-webkit-animation-duration:0.6s ease;
+	animation-name:zoom;
+	animation-duration:0.8s;
+}
+
+@-webkit-keyframes zoom{
+	from{-webkit-transform:scale(0)}
+	to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom{
+	from{transform:scale(0)}
+	to {transform:scale(1)}
+}
+
+#close{
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f2f2f2;
+	font-size: 40px;
+	font-weight: bold;
+	transition:0.5s ease;
+}
+
+#close:hover,#close:focus{
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/*--------------------------------VIXIAN-------------------------------*/
+
+/* ===================
+        MODAL
+    ==================
+ */
+
+#caption2{
+	margin: auto;
+	display: block;
+	width: 20%;
+	max-width: 700px;
+	color: #f2f2f2;
+	font-weight: bold;
+	padding-right: 550px;
+	height: 150px;
+}
+
+#price2{
+	color: #f2f2f2;
+  	font-weight: bold;
+	bottom: 80%;
+	left: 60%;
+	position: relative;
+	display: block;
+	text-align: justify;
+}
+
+#paragraph2{
+	color: #f2f2f2;
+	position: relative;
+	bottom: 75%;
+	left: 60%;
+	display: block;
+	width: 30%;
+	height: 60%;
+	max-width: 100%;
+	text-align: justify;
+	color: #f2f2f2;
+	padding:10px 0;
+}
+
+.modal-image-content , #caption2, #paragraph2, #price2{
+	-webkit-animation-name:zoom;
+	-webkit-animation-duration:0.6s ease;
+	animation-name:zoom;
+	animation-duration:0.8s;
+}
+
+@media screen and (max-width:499px){
+	
+	.product-kawasako{
+		padding-bottom: 55vw;
+		padding-left: 10vw;
+	}
+
+	#product-image-1{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	.kawasaki1 .tag{
+		width: 30vw;
+	}
+
+	.product-kawasako .desc{
+		padding-bottom: 4vw;
+	}
+
+	/*--------------------------------VIXIAN-------------------------------*/
+	
+	#product-image-2{
+		grid-template-columns: repeat(1, 1fr);
+	}
+	
+	.product-vixian{
+		width: 30vw;
+		padding-bottom: 40vw;
+		padding-left: 4.5vw;
+	}
+	
+	.product-vixian img{
+		width: 85vw;
+	}
+	
+	.tag{
+		width: max-content;
+	}
+	
+	#tag-1{
+		padding-left: 50%;
+	}
+	
+	#tag-2{
+		padding-left: 20%;
+	}
+	
+	#tag-3{
+		padding-left: 2%;
+	}
+	
+	.product-vixian .desc{
+		padding: 7vw;
+		width:max-content;
+	}
+
+	#desc-vixian-1{
+		padding:2% 100%;
+	}
+
+	#desc-vixian-2{
+		padding:2% 25%;
+	}
+
+	#desc-vixian-3{
+		padding:2% 85%;
+	}
+
+
+}
